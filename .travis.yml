@@ -1,4 +1,4 @@
 language: c
 compiler: gcc
-install: ./Make
+install: make
 script: ./bin/qa
