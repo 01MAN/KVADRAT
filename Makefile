@@ -23,9 +23,6 @@ build/src/functions.o: src/functions.c src/functions.h
 bin/qa: build/src/main.o build/src/functions.o
 	gcc build/src/main.o build/src/functions.o -o bin/qa -lm
 
-build/test/main.o: test/main.c thirdparty/ctest.h
-	gcc -Wall -Werror -I thirdparty -I src -c test/main.c -o build/test/main.o
-
 build/test/x_test.o: test/x_test.c thirdparty/ctest.h
 	gcc -Wall -Werror -I thirdparty -I src -c test/x_test.c -o build/test/x_test.o
 
