@@ -15,6 +15,6 @@ deletedir:
 	rm -rf bin
 
 main: deletedir makedir
-	gcc -o src/functions.c test/x_test.c test/discriminant_test.c qa-test
+	gcc -o bin/qa-test src/functions.c test/x_test.c test/discriminant_test.c 
 
 clean: rm -rf build/src/*.o build/test/*.o bin/* bin/*.*
