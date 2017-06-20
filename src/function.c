@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include <math.h>
-#include "depcalc.h"
+#include "function.h"
 
 
 float D(float a, float b, float c)

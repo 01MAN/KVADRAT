@@ -21,11 +21,11 @@ deletedir:
 build/src/main.o: src/main.c
 	gcc -Wall -Werror -c -o build/src/main.o src/main.c -lm
 
-build/src/depcalc.o: src/depcalc.c
-	gcc -Wall -Werror -c -o build/src/depcalc.o src/depcalc.c -lm
+build/src/function.o: src/function.c
+	gcc -Wall -Werror -c -o build/src/function.o src/function.c -lm
 
-main: deletedir makedir build/src/main.o build/src/depcalc.o
-	gcc -Wall -Werror -o bin/depcalc build/src/main.o build/src/depcalc.o -lm
+main: deletedir makedir build/src/main.o build/src/function.o
+	gcc -Wall -Werror -o bin/function build/src/main.o build/src/function.o -lm
 
 #сборка теста
 build/test/main.o: test/main.c
@@ -37,5 +37,5 @@ build/test/validation_test.o: test/validation_test.c
 build/test/deposit_test.o: test/deposit_test.c
 	gcc -Wall -Werror -c -o build/test/deposit_test.o test/deposit_test.c -lm
 
-test: deletedir makedir build/test/main.o build/test/validation_test.o build/test/deposit_test.o build/src/depcalc.o
-	gcc -Wall -Werror -o bin/test build/test/main.o build/test/validation_test.o build/test/deposit_test.o build/src/depcalc.o -lm
+test: deletedir makedir build/test/main.o build/test/validation_test.o build/test/deposit_test.o build/src/function.o
+	gcc -Wall -Werror -o bin/test build/test/main.o build/test/validation_test.o build/test/deposit_test.o build/src/function.o -lm
