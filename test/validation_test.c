@@ -16,7 +16,7 @@ CTEST(x_test, D_pol_first)
 	const float result = X(d, a, b, num);
 
 	const float expected = -1;
-	ASSERT_EQUAL(expected, result);
+	ASSERT_DBL_NEAR(expected, result);
 }
 
 CTEST(x_test, d_pol_second)
@@ -29,7 +29,7 @@ CTEST(x_test, d_pol_second)
 	const float result = X(d, a, b, num);
 
 	const float expected = -2;
-	ASSERT_EQUAL(expected, result);
+	ASSERT_DBL_NEAR(expected, result);
 }
 
 CTEST(x_test, d_equal_zero)
@@ -42,5 +42,5 @@ CTEST(x_test, d_equal_zero)
 	const float result = X(d, a, b, num);
 
 	const float expected = -1;
-	ASSERT_EQUAL(expected, result);
+	ASSERT_DBL_NEAR(expected, result);
 }

@@ -12,7 +12,7 @@ CTEST(disc_test, D_pol)
 	const float result = D(a, b, c);
 
 	const float expected = 5;
-	ASSERT_EQUAL(expected, result);
+	ASSERT_DBL_NEAR(expected, result);
 }
 
 CTEST(disc_test, d_equal_zero)
@@ -24,7 +24,7 @@ CTEST(disc_test, d_equal_zero)
 	const float result = D(a, b, c);
 
 	const float expected = 0;
-	ASSERT_EQUAL(expected, result);
+	ASSERT_DBL_NEAR(expected, result);
 }
 
 CTEST(disc_test, d_otr)
@@ -36,5 +36,5 @@ CTEST(disc_test, d_otr)
 	const float result = D(a, b, c);
 
 	const float expected = -3;
-	ASSERT_EQUAL(expected, result);
+	ASSERT_DBL_NEAR(expected, result);
 }
