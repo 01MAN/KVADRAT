@@ -3,7 +3,7 @@ all: bin/qa bin/qa-test
 .RHONY: all clean test
 
 build/src/main.o: src/main.c src/functions.h
-  gcc -Wall -Werror -c src/main.c 
+  gcc -Wall -o src/main.c 
 
 build/src/functions.o: src/functions.c src/functions.h
   gcc -Wall -Werror -c src/functions.c -o build/src/functions.o -lm
