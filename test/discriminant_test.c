@@ -1,5 +1,5 @@
-#include <ctest.h>
-#include "functions.h"
+#include "../thirdparty/ctest.h"
+#include "../src/functions.h"
 
 CTEST(disc_test, D_pol)
 {
