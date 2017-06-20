@@ -1,4 +1,4 @@
 language: c
 compiler: gcc
-install: makefile
+install: Makefile
 script: ./bin/qa
