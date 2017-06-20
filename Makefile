@@ -1,4 +1,4 @@
-all: bin/qa bin/qa-test
+all: bin/qa-test
 
 .RHONY: all clean test
 
