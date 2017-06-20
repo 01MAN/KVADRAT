@@ -2,7 +2,19 @@ all: bin/qa bin/qa-test
 
 .RHONY: all clean test
 
-build/src/main.o: src/main.c src/functions.h
+makedir:
+	mkdir bin
+	mkdir build
+	mkdir build/src
+	mkdir build/test
+
+deletedir:
+	rm -rf build/test
+	rm -rf build/src
+	rm -rf build
+	rm -rf bin
+
+build/src/main.o: deletedir makedir src/main.c src/functions.h
 	gcc -Wall -Werror -c src/main.c -o build/src/main.o 
 
 build/src/functions.o: src/functions.c src/functions.h
