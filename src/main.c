@@ -1,31 +1,32 @@
 #include <stdio.h>
-#include "functions.h"
+#include <stdlib.h>
+#include <ctype.h>
+#include "depcalc.h"
 
-int main()
-{
+int main(){
 	float a, b, c, d, x1, x2;
-	printf("%s", "Введите a\n");
+	printf("%s", "Г‚ГўГҐГ¤ГЁГІГҐ a\n");
 	scanf("%f", &a);
-	printf("%s", "Введите b\n");
+	printf("%s", "Г‚ГўГҐГ¤ГЁГІГҐ b\n");
 	scanf("%f", &b);
-	printf("%s", "Введите c\n");
+	printf("%s", "Г‚ГўГҐГ¤ГЁГІГҐ c\n");
 	scanf("%f", &c);
 
 	d = D(a, b, c);
 
 	if (d < 0)
 	{
-		printf("Комплексные корни\n");
+		printf("ГЉГ®Г¬ГЇГ«ГҐГЄГ±Г­Г»ГҐ ГЄГ®Г°Г­ГЁ\n");
 	}
 	else if (d == 0)
 	{
-		printf("Один корень\n");
+		printf("ГЋГ¤ГЁГ­ ГЄГ®Г°ГҐГ­Гј\n");
 		x1 = X(d, a, b, 1);
 		printf("\n%f", x1);
 	}
 	else
 	{
-		printf("Два корня\n");
+		printf("Г„ГўГ  ГЄГ®Г°Г­Гї\n");
 		x1 = X(d, a, b, 1);
 		x2 = X(d, a, b, -1);
 		printf("\n%f", x1);

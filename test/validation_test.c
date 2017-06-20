@@ -1,5 +1,10 @@
+#include <stdio.h>
+#include <math.h>
+#include "../src/depcalc.h"
 #include "../thirdparty/ctest.h"
-#include "../src/functions.h"
+
+#define YES 1
+#define NO 0
 
 CTEST(x_test, D_pol_first)
 {

@@ -1,5 +1,7 @@
+#include <stdio.h>
+#include <math.h>
+#include "../src/depcalc.h"
 #include "../thirdparty/ctest.h"
-#include "../src/functions.h"
 
 CTEST(disc_test, D_pol)
 {
