@@ -20,9 +20,6 @@ build/src/main.o: deletedir makedir src/main.c src/functions.h
 build/src/functions.o: src/functions.c src/functions.h
 	gcc -Wall -Werror -c src/functions.c -o build/src/functions.o -lm
 
-bin/qa: build/src/main.o build/src/functions.o
-	gcc build/src/main.o build/src/functions.o -o bin/qa -lm
-
 build/test/x_test.o: test/x_test.c thirdparty/ctest.h
 	gcc -Wall -Werror -I thirdparty -I src -c test/x_test.c -o build/test/x_test.o
 
