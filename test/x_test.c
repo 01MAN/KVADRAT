@@ -1,4 +1,4 @@
-#include <ctest.h>
+#include "../thirdparty/ctest.h"
 #include "functions.h"
 
 CTEST(x_test, D_pol_first)
